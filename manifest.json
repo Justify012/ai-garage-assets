@@ -45,10 +45,10 @@
   ],
   "characters": [
     "characters/explaining.svg",
-    "characters/worried.svg",
+    "characters/neutral.svg",
     "characters/pointing.svg",
     "characters/thinking.svg",
-    "characters/neutral.svg"
+    "characters/worried.svg"
   ],
   "paper": [
     "paper/sheet.svg"
@@ -87,10 +87,10 @@
   ],
   "characters_png": [
     "characters/explaining.png",
-    "characters/worried.png",
+    "characters/neutral.png",
     "characters/pointing.png",
     "characters/thinking.png",
-    "characters/neutral.png"
+    "characters/worried.png"
   ],
   "paper_png": [
     "paper/sheet.png"
@@ -153,16 +153,39 @@
     "note": "The hosted library is vector (SVG). It is sharper than PNG at thumbnail scale and the whole library is ~45 KB. PNG copies are materialised by .github/workflows/deploy-assets.yml once the connected GitHub App has the workflows permission; until then the .png URL is absent and SVG is the only format to fetch."
   },
   "character_lock": {
-    "head_diameter_px": 93,
-    "nominal_height_px": 300,
-    "ground_line_y": 880,
-    "anchor_x": 422,
-    "scale": 0.55,
+    "canvas": 512,
+    "figure_height_px": 460,
+    "ground_line_y": 500,
+    "body_center_x": 256,
+    "head_width_px": 72,
+    "default_on_screen_height_px": 380,
+    "default_scale": 0.826,
     "palette": {
-      "head": "#E8B04B",
-      "body": "#D9674E",
-      "limbs": "#24324A"
-    }
+      "shirt": "#5C88B4",
+      "trousers": "#8B6B4A",
+      "hair": "#E08A3C",
+      "shoes": "#4A3524",
+      "skin": "#F3D3B4"
+    },
+    "treatment": {
+      "cut_border": 0,
+      "fibre_overlay": false,
+      "rotation": "\u00b12\u00b0 only, seeded by pose name",
+      "shadow": {
+        "offset_x": 6,
+        "offset_y": 8,
+        "blur": 12,
+        "opacity": 0.28
+      },
+      "note": "This character is a rendered illustration, not a cut-paper shape. Keep the drop shadow so he sits on the kraft table, but skip the cut border and the fibre overlay \u2014 they mottle a textured figure."
+    },
+    "rules": [
+      "fetch_never_redraw",
+      "one_pose_per_scene",
+      "max_one_scene_in_four",
+      "never_advising",
+      "same_transform_in_every_pose"
+    ]
   },
   "notes": "Fetch PNG for rendering, SVG for editing. 512x512 RGBA transparent PNG; alpha=0 at corners, alpha=255 at centre. Filenames carry no extension in the *_png lists."
 }

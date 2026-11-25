@@ -37,8 +37,9 @@ assets/
 - **SVG** is what the renderer fetches from the hosted library — vector, 512×512, transparent background. It is sharper than a raster at thumbnail scale and the whole library is ~45 KB.
 - **PNG** copies (512×512, RGBA, alpha 0 at the corners) stay in the package for offline raster work and the contact sheet. `paper/sheet.png` is the opaque cream background sheet — alpha 255 everywhere, by design.
 - The hosted repo can materialise the PNG copies itself via `.github/workflows/deploy-assets.yml`; until that runs, fetch the `.svg`.
-- **SVG** is both the editable source and the hosted format. Edit it, re-run the rasteriser, commit both.
-- The character is one figure in three poses — mustard circle head, terracotta trapezoid body, navy strip limbs with navy paper fasteners. **Never redraw it in code.** Fetch it.
+- **SVG** is the hosted format for both icons and characters. For the icons it is also the editable source; for the characters it wraps the original PNG from `characters/src/`, because tracing a textured illustration to vector paths would destroy it.
+- The character is one man in five poses — a rendered illustration, not a cut-paper shape. **Never redraw it in code.** Fetch it.
+- The five poses are registered to one shared transform, so his height, ground line and body centre are identical in every pose. Do not re-align or re-scale a pose independently.
 
 ---
 

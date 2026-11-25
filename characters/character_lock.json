@@ -1,0 +1,35 @@
+{
+  "canvas": 512,
+  "figure_height_px": 460,
+  "ground_line_y": 500,
+  "body_center_x": 256,
+  "head_width_px": 72,
+  "default_on_screen_height_px": 380,
+  "default_scale": 0.826,
+  "palette": {
+    "shirt": "#5C88B4",
+    "trousers": "#8B6B4A",
+    "hair": "#E08A3C",
+    "shoes": "#4A3524",
+    "skin": "#F3D3B4"
+  },
+  "treatment": {
+    "cut_border": 0,
+    "fibre_overlay": false,
+    "rotation": "\u00b12\u00b0 only, seeded by pose name",
+    "shadow": {
+      "offset_x": 6,
+      "offset_y": 8,
+      "blur": 12,
+      "opacity": 0.28
+    },
+    "note": "This character is a rendered illustration, not a cut-paper shape. Keep the drop shadow so he sits on the kraft table, but skip the cut border and the fibre overlay \u2014 they mottle a textured figure."
+  },
+  "rules": [
+    "fetch_never_redraw",
+    "one_pose_per_scene",
+    "max_one_scene_in_four",
+    "never_advising",
+    "same_transform_in_every_pose"
+  ]
+}

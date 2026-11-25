@@ -141,8 +141,16 @@
     "manifest": "https://justify012.github.io/ai-garage-assets/manifest.json"
   },
   "cdn_urls": {
-    "icons": "https://cdn.jsdelivr.net/gh/justify012/ai-garage-assets@v1/icons/",
-    "characters": "https://cdn.jsdelivr.net/gh/justify012/ai-garage-assets@v1/characters/"
+    "icons": "https://cdn.jsdelivr.net/gh/justify012/ai-garage-assets@main/icons/",
+    "characters": "https://cdn.jsdelivr.net/gh/justify012/ai-garage-assets@main/characters/"
+  },
+  "formats": {
+    "hosted": "svg",
+    "icon_file": "<name>.svg",
+    "character_file": "<pose>.svg",
+    "png_icon_file": "<name>.png",
+    "png_character_file": "<pose>.png",
+    "note": "The hosted library is vector (SVG). It is sharper than PNG at thumbnail scale and the whole library is ~45 KB. PNG copies are materialised by .github/workflows/deploy-assets.yml once the connected GitHub App has the workflows permission; until then the .png URL is absent and SVG is the only format to fetch."
   },
   "character_lock": {
     "head_diameter_px": 93,
